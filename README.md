@@ -1,2 +1,4 @@
 # SCAR
-Stacked Control Augmented Reality -- a very simply Python/OpenCV demo of taking a base image and applying filters to it.
+## Stacked Control Augmented Reality
+
+This is a very simple proof of concept of something that I wound up not using in my dissertation.
