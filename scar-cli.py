@@ -9,8 +9,13 @@ import cv2
 import logging
 
 import SCAR.Harness.harness as SCARHarness
+
+# our example filters
 import SCAR.face_detect as face
 import SCAR.grey_filter as grey
+import SCAR.canny as canny
+import SCAR.otsu_filter as otsu
+import SCAR.gauss_filter as gauss
 
 # MAIN METHOD
 
@@ -49,12 +54,24 @@ if __name__ == '__main__':
     )
 
     # creating the facejack filter and adding it to our harness
-    facefilter = face.FaceDetect()
-    harness.add_control(facefilter)
+    #facefilter = face.FaceDetect()
+    #harness.add_control(facefilter)
 
     # adding a grayscale filter
     grayfilter = grey.GrayFilter()
     harness.add_control(grayfilter)
+
+    # adding a Canny edge detector filter
+    cannyfilter = canny.CannyFilter()
+    harness.add_control(cannyfilter)
+
+    # adding a Otsu thresholding filter
+    #otsufilter = otsu.OtsuFilter()
+    #harness.add_control(otsufilter)
+
+    # adding a gaussian blue filter
+    #gaussfilter = gauss.GaussFilter()
+    #harness.add_control(gaussfilter)
 
     # loop for getting the image from the webcam and displaying it
     logging.info("Activating main loop-- 'q' to exit loop.")
@@ -68,7 +85,7 @@ if __name__ == '__main__':
         harness.set_base_image(frame)
 
         # Display the resulting frame
-        cv2.imshow('Video', harness.get_current_image())
+        cv2.imshow('SCAR Output', harness.get_current_image())
 
         frame_count += 1
 

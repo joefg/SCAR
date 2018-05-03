@@ -11,7 +11,11 @@ We have a harness, in which we have the input at the bottom of the stack. This i
 
 ## Filters
 
-By having a filter class that can be extended, we can create new filters quickly and easily; all we have to do is modify the `apply_control()` method. There's absolutely nothing stopping us from modifying the class further by adding a second input.
+By having a filter class that can be extended, we can create new filters quickly and easily; all we have to do is modify the `apply_control()` method. There's absolutely nothing stopping us from modifying the class further by adding a second input. There are some demonstration filters included; the filter shown in the photo is the `canny.py` filter, which uses a Canny edge detector.
+
+![SCAR Output](demo.png)
+
+In this particular example, there are two filters: there's the Grayscale filter, and on top of that, there's the Canny edge detector filter.
 
 ## Performance
 
