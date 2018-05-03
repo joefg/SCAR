@@ -79,7 +79,7 @@ class Harness:
         Method to get the image post filtering.
         :return:
         """
-        if len(self.controls) > 1:
+        if len(self.controls) > 0:
             return self.controls[-1].apply_control()
         else:
             return self.base_image

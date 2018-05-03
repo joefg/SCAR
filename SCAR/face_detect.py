@@ -20,7 +20,7 @@ class FaceDetect(control.Control):
     def apply_control(self):
 
         # set our face cascade
-        face_cascade = cv2.CascadeClassifier('SCAR/haarcascade_frontalface_default.xml')
+        face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
         # get locations of faces
         faces = face_cascade.detectMultiScale(
