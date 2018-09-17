@@ -25,4 +25,7 @@ At the moment, this particular implementation is slow, because it's using Python
 
 - You will need OpenCV, NumPy, and a copy of a Haar Cascade for facial detection.
 
-- `python3 scar-cli.py` from this directory.`
+- Run `python3 scar-cli.py` from this directory.
+
+- For build management, use the provided `Makefile`.
+
